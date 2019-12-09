@@ -15,7 +15,7 @@ const App = () => {
   <React.Fragment>
           <Navbar />
           <Switch>
-            <Route exact path="/" component={ProductList}></Route>d
+            <Route exact path="/" component={ProductList}></Route>
             <Route path="/details" component={Details}></Route>
             <Route path="/cart" component={Cart}></Route>
             <Route path="/product" component={Product}></Route>
