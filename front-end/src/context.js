@@ -7,19 +7,37 @@ const ProductContext = React.createContext();
 
 class ProductProvider extends Component {
     state ={
-        products:storeProducts,
+        products: [],
         detailProduct:detailProduct
     }
+    //getting fresh data instead of copy
+    componentDidMount(){
+        this.setProduct();
+    }
+
+    setProduct = () => {
+        let tempProducts = [];
+        storeProducts.forEach(item =>{
+            const singleItem = {...item};
+            tempProducts = [...tempProducts,singleItem];
+            
+        })
+        this.setState(() =>{
+            return {products:tempProducts}
+        })
+    }
+
     handleDetail = () => {
         console.log('hello from detail'); 
     }
     addToCart = () => {
-        console.log('hello from add to cart')
+        console.log()
     }
     render(){
         return (
             <ProductContext.Provider value={{
-                ...this.state,handleDetail:this.handleDetail,
+                ...this.state,
+                handleDetail:this.handleDetail,
                 addToCart:this.addToCart
             }}>
                 {this.props.children}
