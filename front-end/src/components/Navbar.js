@@ -16,17 +16,31 @@ class Navbar extends React.Component{
                 </Link>
                 <ul className="navbar-nav align-items-center">
                     <li className="nav-item ml5"></li>
-                    <Link to="/" className="nav-link">
+                    <Link to="/productlist" className="nav-link">
                         products
                     </Link>
                 </ul>
+                <Link to='/login' className="ml-auto">
+                    <ButtonContainer>
+                        <span className="mr-2">
+                            <i className="fas fa-sign-in-alt"></i>
+                        </span>
+                    </ButtonContainer> 
+                </Link>
+                <Link to='/register' className="ml-auto">
+                    <ButtonContainer>
+                        <span className="mr-2">
+                            <i className="fas fa-registered"></i>
+                        </span>
+                    </ButtonContainer> 
+                </Link>
                 <Link to='/cart' className="ml-auto">
-                  <ButtonContainer>
+                    <ButtonContainer>
                       <span className="mr-2">
                       <i className="fas fa-cart-plus" />
                          my cart
                         </span>
-                </ButtonContainer>  
+                    </ButtonContainer>  
                 </Link>      
             </NavWrapper>
         )
