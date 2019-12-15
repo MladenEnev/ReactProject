@@ -21,18 +21,14 @@ class Navbar extends React.Component{
                     </Link>
                 </ul>
                 <Link to='/login' className="ml-auto">
-                    <ButtonContainer>
-                        <span className="mr-2">
-                            <i className="fas fa-sign-in-alt"></i>
-                        </span>
-                    </ButtonContainer> 
+                 <ButtonContainer>
+                    <button type="button" class="btn">Login</button>
+                 </ButtonContainer>   
                 </Link>
                 <Link to='/register' className="ml-auto">
-                    <ButtonContainer>
-                        <span className="mr-2">
-                            <i className="fas fa-registered"></i>
-                        </span>
-                    </ButtonContainer> 
+                <ButtonContainer>
+                    <button type="button" class="btn">Register</button>
+                 </ButtonContainer> 
                 </Link>
                 <Link to='/cart' className="ml-auto">
                     <ButtonContainer>

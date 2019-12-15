@@ -6,11 +6,12 @@ import logo from './logo.svg';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Navbar from './components/Navbar'
-import Cart from './components/Cart';
+import Cart from './components/Cart/Cart';
 import Home from './components/Home';
 import Details from './components/Details';
 import Product from './components/Product';
 import ProductList from './components/ProductList';
+import Model from './components/Model';
 
 const App = () => {
   return (
@@ -25,6 +26,7 @@ const App = () => {
             <Route path="/product" component={Product}></Route>
             <Route path="/productlist" component={ProductList}></Route>
           </Switch>
+          <Model />
     </React.Fragment>
   );
 }

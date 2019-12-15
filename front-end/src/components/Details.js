@@ -42,8 +42,10 @@ return(
                             </Link>
                             <ButtonContainer 
                             cart 
-                            disabled={inCart?true:false} onClick={() =>{
-                                value.addToCart(id)
+                            disabled={inCart ? true : false} 
+                            onClick={() =>{
+                                value.addToCart(id);
+                                value.openModel(id);
                             }}
                             >
                                 {inCart?'inCart':"add to cart"}
